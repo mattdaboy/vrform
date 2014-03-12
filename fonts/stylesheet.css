@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'berthold_akzidenz_grotesk_bLt';
+    src: url('akzidenzgroteskbe-light-webfont.eot');
+    src: url('akzidenzgroteskbe-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('akzidenzgroteskbe-light-webfont.woff') format('woff'),
+         url('akzidenzgroteskbe-light-webfont.ttf') format('truetype'),
+         url('akzidenzgroteskbe-light-webfont.svg#berthold_akzidenz_grotesk_bLt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
