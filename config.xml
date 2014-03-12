@@ -13,6 +13,7 @@
 		<preference name="fullscreen" value="true" />
 		<preference name="UIWebViewBounce" value="false" />
 		<preference name="DisallowOverscroll" value="true" />
+		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
 
 		<name>V&R Bonbon</name>
 
