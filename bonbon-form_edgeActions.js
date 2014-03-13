@@ -9,7 +9,7 @@ var firstname=sym.$("firstname_txt");setInput(firstname,"Enter first name","firs
 if(!verifyUkPostcode($("#postcode:first").val())){alert("Check postcode, please");return;}
 alert("gender : "+gender+"\n"+"first name : "+$("#firstname:first").val()+"\n"+"last name : "+$("#lastname:first").val()+"\n"+"email : "+$("#email:first").val()+"\n"+"postcode : "+$("#postcode:first").val()+"\n"+"city : "+$("#city:first").val());return true;}
 var userLang=(navigator.language||navigator.userLanguage).toLowerCase();alert("The language is: "+userLang);function verifyMail(str){var re=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;return re.test(str);}
-function verifyUkPostcode(str){if(userLang.toLowerCase()=="en-gb"||userLang.toLowerCase()=="en"||userLang.toLowerCase()=="fr"){var re=/^(GIR ?0AA|[A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]([0-9ABEHMNPRV-Y])?)|[0-9][A-HJKPS-UW]) ?[0-9][ABD-HJLNP-UW-Z]{2})$/;}
+function verifyUkPostcode(str){if(userLang.toLowerCase()=="en-gb"||userLang.toLowerCase()=="en"||userLang.toLowerCase()=="fr"||userLang.toLowerCase()=="fr-fr"){var re=/^(GIR ?0AA|[A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]([0-9ABEHMNPRV-Y])?)|[0-9][A-HJKPS-UW]) ?[0-9][ABD-HJLNP-UW-Z]{2})$/;}
 if(userLang.toLowerCase()=="nl"){var re=/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-zA-Z]{2}$/;}
 return re.test(str);}});
 //Edge binding end
