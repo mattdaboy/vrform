@@ -8,9 +8,9 @@ function setInput(elem,value,id){var input=$('<input id="'+id+'" type="text" pla
 var firstname=sym.$("firstname_txt");setInput(firstname,"Enter first name","firstname");var lastname=sym.$("lastname_txt");setInput(lastname,"Enter last name","lastname");var email=sym.$("email_txt");setInput(email,"Enter e-mail","email");var postcode=sym.$("postcode_txt");setInput(postcode,"Enter postcode","postcode");var city=sym.$("city_txt");setInput(city,"Enter city","city");function formSubmit(){console.log(location.hash);if(!verifyMail($("#email:first").val())){alert("Check e-mail, please");return;}
 if(!verifyUkPostcode($("#postcode:first").val())){alert("Check postcode, please");return;}
 alert("gender : "+gender+"\n"+"first name : "+$("#firstname:first").val()+"\n"+"last name : "+$("#lastname:first").val()+"\n"+"email : "+$("#email:first").val()+"\n"+"postcode : "+$("#postcode:first").val()+"\n"+"city : "+$("#city:first").val());return true;}
-var userLang=(navigator.language||navigator.userLanguage).toLowerCase();alert("The language is: "+userLang);function verifyMail(str){var re=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;return re.test(str);}
-function verifyUkPostcode(str){if(userLang.toLowerCase()=="en-gb"||userLang.toLowerCase()=="en"||userLang.toLowerCase()=="fr"||userLang.toLowerCase()=="fr-fr"){var re=/^(GIR ?0AA|[A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]([0-9ABEHMNPRV-Y])?)|[0-9][A-HJKPS-UW]) ?[0-9][ABD-HJLNP-UW-Z]{2})$/;}
-if(userLang.toLowerCase()=="nl"){var re=/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-zA-Z]{2}$/;}
+var userLang=(navigator.language||navigator.userLanguage).toLowerCase();alert("The language is: "+userLang);function verifyMail(str){var re=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/i;return re.test(str);}
+function verifyUkPostcode(str){if(userLang.toLowerCase()=="en-gb"||userLang.toLowerCase()=="en"||userLang.toLowerCase()=="fr"||userLang.toLowerCase()=="fr-fr"){var re=/^(GIR ?0AA|[A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]([0-9ABEHMNPRV-Y])?)|[0-9][A-HJKPS-UW]) ?[0-9][ABD-HJLNP-UW-Z]{2})$/i;}
+if(userLang.toLowerCase()=="nl"){var re=/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i;}
 return re.test(str);}});
 //Edge binding end
 })("stage");
